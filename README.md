@@ -17,7 +17,7 @@ Download [the Pre-Release Version](https://github.com/islem19/File-XSearch/relea
 <br>
 <br>
 <br>
-> Note: Command Line is still in Alpha Version. Feel Free to [Contribute](https://gist.github.com/MarcDiethelm/7303312)
+> Note: Command Line is still in Alpha Version. Feel Free to [Contribute](https://github.com/islem19/File-XSearch/blob/master/CONTRIBUTING.md)
 
 
 ## Installation
