@@ -1,0 +1,76 @@
+.\" Manpage for File XSearch.
+.\" Contact sellislem@gmail.com .in to correct errors or typos.
+.TH man 1 "31 May 2019" "1.0" "XSearch man page"
+.SH NAME
+xsearch \- a command line tool to search for a keyword in all files within a folder
+.SH SYNOPSIS
+.B xsearch 
+.RI "[" OPTION "] [" -f|--folder "] [ "-k|--keyword "]..."
+.SH DESCRIPTION
+.B XSearch 
+is Bash script command line for searching for a Keyword entered by the user and look through all directories, the output will be a hyperlink to the file and the line where the keyword was found. 
+.SH OPTIONS
+.TP
+.B -c, --case-sensitive
+Enable case sensitive search (Default case insensetive search)
+.TP
+.B -e, --extension 
+Specify the Extension of the file to be search, currently support only one extension option (Default search through all Extensions)"
+.TP
+.B -f, --folder               
+Specify the Directory, if not spesified seach in present working directory (pwd)
+.TP
+.B -k, --keyword              
+Specify the Keyword. it supports both single strings and regex
+.TP
+.RS 0.5
+.B  regex: 
+For searching using regex, you should write your "regex" (between quotation) without (//) or (^$). Check out the Examples below.
+
+.TP
+.B -h, --help                 
+Prints the program usage information and exits successfully.
+.TP
+.B -v, --version                 
+Prints the program version number and exits successfully.
+.SH EXAMPLES
+The following will show a typical demo on how to use the command
+.PP
+.RS
+.RI "Search for a single string keyword:"
+.br
+.BR $ " xsearch --folder my_folder --keyword my_keyword"
+.br
+.PP 
+.RI "Search for the keyword test using regex:"
+.br
+.BR $ " xsearch --folder my_folder --keyword '(.+?-)?test(-.+)?' "
+.br
+.PP
+.RI "Search for numbers using regex:"
+.br
+.BR $ " xsearch --folder my_folder --keyword '([0-9][0-9]*)'  "
+.br
+
+.SH EXIT STATUS
+If The command line option is not used properly, this will end with exit status 1.
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Abdelkadere Sellami (sellislem@gmail.com)
+.SH COPYRIGHT
+The GNU General Public License V3.0
+.PP
+Copyright (c) 2019 Abdelkader Sellami
+.PP
+This document is part of the XSearch software.
+.PP
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
